@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous" />
+  <link rel="stylesheet" href="homeStyle.css" />
+
+  <title>Meus Recados</title>
+</head>
+
+<body onload="load()">
+  <div class="container-fluid p-5">
+    <header>
+      <h1>Meus recados</h1>
+      <section class="row">
+        <div class="col-3">
+          <input id="description" type="text" aria-label="Descricao" class="form-control" placeholder="Descricao" />
+        </div>
+        <div class="col-9">
+          <div class="input-group mb-3">
+            <input id="detail" type="text" aria-label="Detalhamento" class="form-control" placeholder="Detalhamento" />
+            <button type="button" class="btn btn-indigo text-light" onclick="insert()">Salvar</button>
+          </div>
+        </div>
+      </section>
+    </header>
+    <main>
+      <table id="messagesTable" class="table table-striped align-middle">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Detalhamento</th>
+            <th scope="col">Ação</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <div class="modal fade" id="removeModal" tabindex="-1" aria-labelledby="removeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="removeModalLabel">Confirmar exclusão dos dados?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">Os dados serão excluidos ao apagar.</div>
+        <div class="modal-footer">
+          <button id="confirmRemove" type="button" class="btn btn-danger">Excluir</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="modal fade" id="updateModal" tabindex="-1" aria-labelledby="updateModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="updateModalLabel">Editar</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+            <div class="input-group  mb-3">
+              <input id="descriptionEdit" type="text" aria-label="Descricao" class="form-control" placeholder="Descricao" />
+              <input id="detailEdit" type="text" aria-label="Detalhamento" class="form-control"
+                placeholder="Detalhamento" />
+            </div>
+            <div class="modal-footer">
+              <button id="confirmSave" type="button" class="btn btn-success">Salvar</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+      <script src="home.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../images/Devil-PNG-Image-18263.png" type="image/x-icon">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./loginStyle.css" />
+
+    <title>LOGIN</title>
+  </head>
+
+  <body>
+    <div class="container-fluid p-0">
+      <div class="row p-0 align-items-end">
+        <div class="col-12 col-md-6 p-0">
+          <div class="image">
+            <img src="../images/globalization-animate.svg" alt="Global">
+          </div>
+        </div>
+        <div class="content col-8 col-md-4 offset-md-1 offset-2 text-center">
+          <h1 class="text-muted">ENTRAR NO SISTEMA DE RECADOS</h1>
+          
+          <br />
+          <div class="vstack gap-3 mx-auto">
+            <div class="input-group">
+              <input id="username" type="text" aria-label="Nome do Usuário" class="form-control" placeholder="Nome do Usuário" />
+              <input id="password" type="password" aria-label="Senha" class="form-control" placeholder="Senha" />
+            </div>
+            <button type="button" class="col-12 btn btn-success" onclick="signIn()">Entrar</button>
+            <div class="text-center">
+              <a href="../registro/cadastro.html">Criar conta</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>
